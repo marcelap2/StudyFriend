@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity_add_event">
+
+    <TextView
+        android:id="@+id/textViewFechaEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha"
+        android:layout_marginTop="60px"
+        android:layout_marginLeft="70px"
+        android:textSize="30px"
+      />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="300px"
+        android:layout_marginTop="30px"
+        android:inputType="date"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <TextView
+        android:id="@+id/textViewnombreEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name Event"
+        android:layout_marginTop="200px"
+        android:layout_marginLeft="70px"
+        android:textSize="30px"
+      />
+
+    <EditText
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Name event"
+        android:layout_marginTop="150px"
+        android:layout_marginLeft="300px"
+        android:textSize="60px"/>
+
+
+    <TextView
+        android:id="@+id/textViewntEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notifie Event"
+        android:layout_marginTop="350px"
+        android:layout_marginLeft="70px"
+        android:textSize="30px"
+        />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToggleButton"
+        android:layout_marginTop="330px"
+        android:layout_marginLeft="350px"/>
+    <TextView
+        android:id="@+id/textViewringtone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ringtone"
+        android:layout_marginTop="500px"
+        android:layout_marginLeft="70px"
+        android:textSize="30px"
+        />
+
+    <Button
+        android:id="@+id/buttonringtonevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="buscar"
+        android:layout_marginTop="480px"
+        android:layout_marginLeft="300px"/>
+
+    <TextView
+        android:id="@+id/textViewcolorevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Color"
+        android:layout_marginTop="650px"
+        android:layout_marginLeft="70px"
+        android:textSize="30px"
+       />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:id="@+id/buttonaddevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:text="Add Recordatory"
+        android:layout_marginTop="900px"
+        android:layout_centerHorizontal="true"/>
+
+
+
+</RelativeLayout>

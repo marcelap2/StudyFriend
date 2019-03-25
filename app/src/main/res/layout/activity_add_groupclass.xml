@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textViewclassgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:layout_marginTop="150px"
+        android:text="Name Class"
+        android:textSize="30px" />
+
+    <EditText
+        android:id="@+id/buttonnameclassgroup"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350px"
+        android:layout_marginTop="130px"
+        android:text="Name Class" />
+
+    <TextView
+        android:id="@+id/textViewcolorevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:layout_marginTop="270px"
+        android:text="ID Group"
+        android:textSize="30px" />
+
+    <EditText
+        android:id="@+id/IDgroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350px"
+        android:layout_marginTop="250px"
+        android:text="ID Group" />
+
+    <TextView
+        android:id="@+id/textViewnonegroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70px"
+        android:layout_marginTop="450px"
+        android:text="None Goup"
+        android:textSize="30px" />
+
+    <EditText
+        android:id="@+id/nonegroup"
+        android:layout_width="400px"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="350px"
+        android:layout_marginTop="430px"
+        android:text="None Group" />
+
+    <Button
+        android:id="@+id/buttonaddgroupclass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="700px"
+        android:text="Add Group" />
+
+</RelativeLayout>
