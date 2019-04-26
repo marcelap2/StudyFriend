@@ -3,63 +3,52 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <TextView
         android:id="@+id/textViewclassgroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70px"
-        android:layout_marginTop="150px"
+        android:layout_below="@id/toolbar"
         android:text="Name Class"
-        android:textSize="30px" />
+        style="@style/styletextview" />
 
     <EditText
-        android:id="@+id/buttonnameclassgroup"
-        android:layout_width="400px"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="350px"
-        android:layout_marginTop="130px"
-        android:text="Name Class" />
+        android:id="@+id/editnameclassgroup"
+        android:text="Name Class"
+        android:layout_below="@id/toolbar"
+        style="@style/styleedittext"/>
 
     <TextView
         android:id="@+id/textViewcolorevent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70px"
-        android:layout_marginTop="270px"
+        android:layout_below="@id/textViewclassgroup"
         android:text="ID Group"
-        android:textSize="30px" />
+        style="@style/styletextview"
+       />
 
     <EditText
         android:id="@+id/IDgroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="350px"
-        android:layout_marginTop="250px"
-        android:text="ID Group" />
+        android:layout_below="@id/editnameclassgroup"
+        android:text="ID Group"
+        style="@style/styleedittext"/>
 
     <TextView
         android:id="@+id/textViewnonegroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70px"
-        android:layout_marginTop="450px"
+        android:layout_below="@id/textViewcolorevent"
         android:text="None Goup"
-        android:textSize="30px" />
+        style="@style/styletextview"/>
 
     <EditText
         android:id="@+id/nonegroup"
-        android:layout_width="400px"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="350px"
-        android:layout_marginTop="430px"
-        android:text="None Group" />
+        android:layout_below="@id/IDgroup"
+        android:text="None Group"
+        style="@style/styleedittext"/>
 
     <Button
         android:id="@+id/buttonaddgroupclass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="700px"
+        android:layout_marginTop="300dp"
         android:text="Add Group" />
 
 </RelativeLayout>

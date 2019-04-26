@@ -4,77 +4,83 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="name class"
-        android:layout_marginTop="90px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"/>
-
-    <EditText
-        android:id="@+id/nameclass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="name class"
-        android:layout_marginTop="70px"
-        android:layout_marginLeft="300px"/>
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Days class"
-        android:layout_marginTop="300px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"/>
+        <TextView
+            android:id="@+id/textnameclasse"
+            android:text="name class"
+            android:layout_below="@id/toolbar"
+            style="@style/styletextview"
+            />
+
+        <EditText
+            android:id="@+id/nameclass"
+            android:text="name class"
+            android:layout_below="@id/toolbar"
+            style="@style/styleedittext"
+            />
+
+
+        <TextView
+            android:id="@+id/textdayclass"
+            android:text="Days class"
+            android:layout_below="@id/textnameclasse"
+            style="@style/styletextview"/>
 
     <Button
         android:id="@+id/buttonadddayclass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/nameclass"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="24dp"
         android:text="Add Days"
-        android:layout_marginTop="250px"
-        android:layout_marginLeft="300px"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hour Class"
-        android:layout_marginTop="450px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"/>
-
-    <Button
-        android:id="@+id/buttonaddhour1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Monday"
-        android:layout_marginTop="430px"
-        android:layout_marginLeft="300px"
-        />
-
-    <Button
-        android:id="@+id/buttonaddhour"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Saturday"
-        android:layout_marginTop="430px"
-        android:layout_marginLeft="550px"
-        />
-
-
-    <Button
-        android:id="@+id/buttonaddclass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="650px"
-        android:textColor="@color/colorAccent"
 
         />
+
+        <TextView
+            android:text="Hour Class"
+            android:layout_below="@id/textdayclass"
+            style="@style/styletextview"/>
+
+        <Button
+            android:id="@+id/buttonaddhour1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonadddayclass"
+            android:text="Monday"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="150dp"
+            />
+
+        <Button
+            android:id="@+id/buttonaddhour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonadddayclass"
+            android:text="Saturday"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="250dp"
+            />
+
+
+        <Button
+            android:id="@+id/buttonaddclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/buttonaddhour"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/colorAccent"
+
+            />
+
+
+
+
 
 
 </RelativeLayout>

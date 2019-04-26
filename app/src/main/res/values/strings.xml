@@ -1,3 +1,3 @@
 <resources>
-    <string name="app_name">StudyFriendApp</string>
+    <string name="app_name" size="15dp">StudyFriendApp</string>
 </resources>

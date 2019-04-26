@@ -19,8 +19,7 @@ public class activity_add_event extends AppCompatActivity {
          buttonAddE.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-                 Intent i = new Intent (activity_add_event.this, activity_add_class.class);
-                 startActivity(i);
+
              }
          });
 

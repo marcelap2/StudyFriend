@@ -20,8 +20,7 @@ public class activity_add_groupclass extends AppCompatActivity {
         buttonaddgroupclass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(activity_add_groupclass.this, activity_add_recordatory.class);
-                startActivity(i);
+
             }
         });
     }

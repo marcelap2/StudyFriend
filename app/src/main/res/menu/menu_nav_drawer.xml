@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/addClass"
+            android:title="Add Class"/>
+        <item android:id="@+id/addRecordatory"
+            android:title="Add Recordatory"/>
+        <item android:id="@+id/addGroup"
+            android:title="Add Group"/>
+        <item android:id="@+id/addEvent"
+            android:title="Add Event"/>
+
+    </group>
+
+</menu>

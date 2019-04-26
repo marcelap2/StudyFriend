@@ -7,94 +7,83 @@
     android:orientation="vertical"
     tools:context=".activity_add_event">
 
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
     <TextView
         android:id="@+id/textViewFechaEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
         android:text="Fecha"
-        android:layout_marginTop="60px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
       />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="300px"
-        android:layout_marginTop="30px"
+        android:id="@+id/editfecha"
+        android:layout_below="@id/toolbar"
+       style="@style/styleedittext"
         android:inputType="date"
         tools:text="@tools:sample/date/ddmmyy" />
 
     <TextView
         android:id="@+id/textViewnombreEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFechaEvento"
         android:text="Name Event"
-        android:layout_marginTop="200px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
       />
 
     <EditText
-        android:layout_width="400px"
-        android:layout_height="wrap_content"
+        android:id="@+id/editnameevent"
+        android:layout_below="@id/editfecha"
         android:inputType="text"
         android:text="Name event"
-        android:layout_marginTop="150px"
-        android:layout_marginLeft="300px"
-        android:textSize="60px"/>
+        style="@style/styleedittext"
+        />
 
 
     <TextView
         android:id="@+id/textViewntEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewnombreEvento"
         android:text="Notifie Event"
-        android:layout_marginTop="350px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
         />
 
     <ToggleButton
         android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/editnameevent"
         android:text="ToggleButton"
-        android:layout_marginTop="330px"
-        android:layout_marginLeft="350px"/>
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="150dp"/>
+
     <TextView
         android:id="@+id/textViewringtone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewntEvento"
         android:text="Ringtone"
-        android:layout_marginTop="500px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
         />
 
     <Button
         android:id="@+id/buttonringtonevent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toggleButton"
         android:textColor="@color/colorAccent"
         android:text="buscar"
-        android:layout_marginTop="480px"
-        android:layout_marginLeft="300px"/>
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="150dp"/>
 
     <TextView
         android:id="@+id/textViewcolorevent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewringtone"
         android:text="Color"
-        android:layout_marginTop="650px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
        />
 
     <RadioGroup
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonringtonevent"/>
 
 
     <Button

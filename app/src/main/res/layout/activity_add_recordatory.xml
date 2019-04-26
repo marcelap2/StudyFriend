@@ -3,95 +3,73 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
 
     <TextView
         android:id="@+id/textViewnombreEvento"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
         android:text="Name Class"
-        android:layout_marginTop="150px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
       />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/editnombrerecordatory"
+        android:layout_below="@id/toolbar"
         android:inputType="text"
-        android:width="300px"
         android:text="Name Class"
-        android:layout_marginTop="110px"
-        android:layout_marginLeft="350px"
-        android:textSize="60px"/>
+        style="@style/styleedittext"/>
 
 
     <TextView
         android:id="@+id/textViewntEventorecordatory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewnombreEvento"
         android:text="Event"
-        android:layout_marginTop="270px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
-   />
+        style="@style/styletextview" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/eventrecordatory"
+        android:layout_below="@id/editnombrerecordatory"
         android:inputType="text"
         android:text="Event"
-        android:layout_marginTop="250px"
-        android:layout_marginLeft="350px"
-        android:textSize="60px"/>
-
-
+        style="@style/styleedittext"/>
 
     <TextView
         android:id="@+id/textViewcolorevent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewntEventorecordatory"
         android:text="Date"
-        android:layout_marginTop="390px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
       />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/editTextdate"
+        android:layout_below="@id/eventrecordatory"
         android:ems="6"
         android:inputType="date"
-        android:layout_marginLeft="350px"
-        android:layout_marginTop="370px"/>
+        style="@style/styleedittext"/>
 
     <TextView
         android:id="@+id/textViewhourrecordatory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewcolorevent"
         android:text="Hour"
-        android:layout_marginTop="510px"
-        android:layout_marginLeft="70px"
-        android:textSize="30px"
+        style="@style/styletextview"
     />
 
     <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/editTexthour"
+        android:layout_below="@id/editTextdate"
         android:ems="6"
         android:inputType="time"
-        android:layout_marginTop="490px"
-        android:layout_marginLeft="350px"/>
+        style="@style/styleedittext"/>
 
     <Button
         android:id="@+id/buttonaddevent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/editTexthour"
         android:textColor="@color/colorAccent"
         android:text="Add Recordatory"
-        android:layout_marginTop="700px"
+        android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"/>
 
 
