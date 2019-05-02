@@ -10,6 +10,16 @@
             android:title="Add Group"/>
         <item android:id="@+id/addEvent"
             android:title="Add Event"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item android:title="color 1"
+            android:id="@+id/color_1"/>
+        <item android:title="color2"
+            android:id="@+id/color_2"/>
+        <item android:title="colo 3"
+            android:id="@+id/color_3"/>
+        <item android:title="colo 4"
+            android:id="@+id/color_4"/>
 
     </group>
 

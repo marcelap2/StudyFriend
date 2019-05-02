@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name" size="15dp">StudyFriendApp</string>
+    <string name="no_tareas" size="50dp">No tienes tareas para hoy</string>
+    <string name="no_eventos" size="50dp">No tienes eventos para hoy</string>
+    <string name="no_clase" size="50dp">No tienes Clase para hoy</string>
+    <string name="no_examen" size="50dp">No tienes examen para hoy</string>
+    <string name="item_1" size="15dp">Agenda</string>
+    <string name="item_2" size="15dp">Profesores</string>
+    <string name="item_3" size="15dp">Clases</string>
+
 </resources>
+
+

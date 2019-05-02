@@ -1,7 +1,9 @@
-package com.example.studyfriendapp;
+package com.example.studyfriendapp.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.studyfriendapp.R;
 
 public class activity_add_recordatory extends AppCompatActivity {
 

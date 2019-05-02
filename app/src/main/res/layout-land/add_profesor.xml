@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include android:id="@+id/toolbar"
+                layout="@layout/toolbar"/>
+
+            <TextView
+                android:id="@+id/text_nombre_profesor"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/toolbar"
+                android:text="Name Profesor" />
+
+            <EditText
+                android:id="@+id/edit_nombre_profesor"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/toolbar"
+                android:inputType="text"
+                android:text="Name" />
+
+
+            <TextView
+                android:id="@+id/text_materia"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/text_nombre_profesor"
+                android:text="Materia" />
+
+            <EditText
+                android:id="@+id/edit_materia"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/edit_nombre_profesor"
+                android:inputType="text"
+                android:text="Materia" />
+
+            <TextView
+                android:id="@+id/text_telefono"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/text_materia"
+                android:text="Telefono" />
+
+            <EditText
+                android:id="@+id/edit_telefono"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/edit_materia"
+                android:ems="6" />
+
+            <TextView
+                android:id="@+id/text_email"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/text_telefono"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/edit_email"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/edit_telefono"
+                android:ems="6"
+                android:inputType="time" />
+
+            <Button
+                android:id="@+id/buttonaddevent"
+                style="@style/Buttons"
+                android:layout_below="@id/edit_email"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:layout_margin="16dp"
+                android:text="Agregar" />
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

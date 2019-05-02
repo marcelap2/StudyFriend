@@ -1,19 +1,15 @@
-package com.example.studyfriendapp;
+package com.example.studyfriendapp.Activities;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Rect;
-import android.provider.SyncStateContract;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -22,24 +18,20 @@ import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.example.studyfriendapp.Activities.activity_add_class;
-import com.example.studyfriendapp.Activities.activity_add_event;
-import com.example.studyfriendapp.Activities.activity_add_groupclass;
-import com.example.studyfriendapp.Activities.activity_add_recordatory;
-import com.example.studyfriendapp.Adapters.EventAdapter;
-import com.example.studyfriendapp.Models.Event;
+import com.example.studyfriendapp.Adapters.ItemMenuAdapter;
+import com.example.studyfriendapp.Models.ItemMenu;
+import com.example.studyfriendapp.R;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class menu_items extends AppCompatActivity {
 
 
     private DrawerLayout drawerLayout;
     private NavigationView navegationView;
-    private ArrayList<Event> lista = new ArrayList<Event>();
+    private ArrayList<ItemMenu> lista = new ArrayList<ItemMenu>();
     private RecyclerView recycler;
-    private EventAdapter adapter;
-    SharedPreferences sharedPreferences;
+    private ItemMenuAdapter adapter;
     private  int spanCount = 2;
 
 
@@ -55,63 +47,61 @@ public class MainActivity extends AppCompatActivity {
         recycler = (RecyclerView) findViewById(R.id.reciclador);
 
         lista = new ArrayList<>();
-        adapter = new EventAdapter(this, lista);
+        adapter = new ItemMenuAdapter(this, lista);
         adapter.notifyDataSetChanged();
 
-        if (esLandscape(this) && esTablet(this)==false){
+        if (this.getResources().getConfiguration().orientation ==
+                this.getResources().getConfiguration()
+                        .ORIENTATION_LANDSCAPE){
             spanCount = 3;
-        } else if (esTablet(this)){
-                spanCount = 3;
-        }else if (esTablet(this ) && esLandscape(this)){
-            spanCount = 4;
         }
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, spanCount);
         recycler.setLayoutManager(mLayoutManager);
-        recycler.addItemDecoration(new MainActivity.GridSpacingItemDecoration(spanCount, dpToPx(0), true));
+        recycler.addItemDecoration(new menu_items.GridSpacingItemDecoration(spanCount, dpToPx(0), true));
         recycler.setItemAnimator(new DefaultItemAnimator());
         recycler.setAdapter(adapter);
 
-           navegationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-               @Override
-               public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        navegationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-                   boolean actitransaction = false;
-                   Intent intent = null;
+                boolean actitransaction = false;
+                Intent intent = null;
 
-                   switch (menuItem.getItemId()){
-                       case R.id.addClass:
-                           actitransaction = true;
-                           intent = new Intent(MainActivity.this, activity_add_class.class);
-                           break;
-                       case R.id.addEvent:
-                           actitransaction = true;
-                           intent = new Intent(MainActivity.this, activity_add_event.class);
-                           break;
-                       case R.id.addGroup:
-                           actitransaction = true;
-                           intent = new Intent(MainActivity.this, activity_add_groupclass.class);
-                           break;
-                       case R.id.addRecordatory:
-                           actitransaction = true;
-                           intent = new Intent(MainActivity.this, activity_add_recordatory.class);
-                           break;
-                   }
+                switch (menuItem.getItemId()){
+                    case R.id.addClass:
+                        actitransaction = true;
+                        intent = new Intent(menu_items.this, activity_add_class.class);
+                        break;
+                    case R.id.addEvent:
+                        actitransaction = true;
+                        intent = new Intent(menu_items.this, activity_add_event.class);
+                        break;
+                    case R.id.addGroup:
+                        actitransaction = true;
+                        intent = new Intent(menu_items.this, activity_add_groupclass.class);
+                        break;
+                    case R.id.addRecordatory:
+                        actitransaction = true;
+                        intent = new Intent(menu_items.this, activity_add_recordatory.class);
+                        break;
+                }
 
-                   if (actitransaction){
-                       startActivity(intent);
-                       menuItem.setChecked(true);
-                       getSupportActionBar().setTitle(menuItem.getTitle());
-                       drawerLayout.closeDrawers();
-                   }
+                if (actitransaction){
+                    startActivity(intent);
+                    menuItem.setChecked(true);
+                    getSupportActionBar().setTitle(menuItem.getTitle());
+                    drawerLayout.closeDrawers();
+                }
 
-                   return true;
-               }
-           });
+                return true;
+            }
+        });
 
-     //   lista.add(new Event ("Menu", "Mi Menu"));
+        //   lista.add(new Event ("Menu", "Mi Menu"));
 
-            fillEvent();
+        fillEvent();
     }
 
 
@@ -131,11 +121,12 @@ public class MainActivity extends AppCompatActivity {
                 R.drawable.icons8_tarea,
         };
 
-        lista.add(new Event ("Menu", "Mi Menu", covers[0]));
-        lista.add(new Event("Exam", "Examenes", covers[1]));
-        lista.add(new Event("Class", "Clases", covers[2]));
-        lista.add(new Event("Event", "Eventos", covers[3]));
-        lista.add(new Event("Tarea", "Tareas", covers[4]));
+        lista.add(new ItemMenu ("Agenda", "Mi Menu", covers[0]));
+        lista.add(new ItemMenu("Profesores", "No Event", covers[1]));
+        lista.add(new ItemMenu("Horarios", "No class Todat", covers[2]));
+        lista.add(new ItemMenu("Clases", "No Event", covers[3]));
+        lista.add(new ItemMenu("Mis notas", "No hay tareas", covers[4]));
+        lista.add(new ItemMenu("Fallas", "No hay tareas", covers[4]));
     }
 
 
@@ -190,18 +181,4 @@ public class MainActivity extends AppCompatActivity {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
-
-    public static boolean esTablet (Context context) {
-        return (context.getResources().getConfiguration().screenLayout
-                & Configuration.SCREENLAYOUT_SIZE_MASK)
-                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
-    }
-
-    public  static boolean esLandscape (Context contex){
-        return contex.getResources().getConfiguration().orientation ==
-                contex.getResources().getConfiguration()
-                        .ORIENTATION_LANDSCAPE;
-    }
-
-
 }

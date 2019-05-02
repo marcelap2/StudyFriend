@@ -7,6 +7,29 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="Theme_2" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#500308</item>
+        <item name="colorPrimaryDark">#555555</item>
+        <item name="colorAccent">#818181</item>
+    </style>
+
+    <style name="Theme_3" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#9C27B0</item>
+        <item name="colorPrimaryDark">#6a0080</item>
+        <item name="colorAccent">#d05ce3</item>
+    </style>
+
+    <style name="Theme_4" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#1565C0</item>
+        <item name="colorPrimaryDark">#5e92f3</item>
+        <item name="colorAccent">#003c8f</item>
+    </style>
+
+
     <style name="styletextview">
         <item name="android:textSize">15dp</item>
         <item name="android:layout_marginLeft">30dp</item>
@@ -17,8 +40,28 @@
     <style name="styleedittext">
         <item name="android:layout_width">170dp</item>
         <item name="android:layout_marginLeft">150dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="styletextviewlandscape">
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_marginLeft">150dp</item>
+        <item name="android:layout_marginTop">55dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+    <style name="styleedittextlandscape">
+        <item name="android:layout_width">170dp</item>
+        <item name="android:layout_marginLeft">290dp</item>
         <item name="android:layout_marginTop">30dp</item>
         <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="Buttons">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">290dp</item>
+        <item name="android:background">@color/colorAccent </item>
+        <item name="android:textColor">#ffff</item>
     </style>
 
 </resources>

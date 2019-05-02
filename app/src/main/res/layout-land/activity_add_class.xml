@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+        <TextView
+            android:id="@+id/textnameclasse"
+            android:text="name class"
+            android:layout_below="@id/toolbar"
+            style="@style/styletextviewlandscape"
+            />
+
+    <EditText
+        android:id="@+id/nameclass"
+        style="@style/styleedittextlandscape"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="41dp"
+        android:text="name class"
+        />
+
+        <TextView
+            android:id="@+id/textdayclass"
+            android:text="Days class"
+            android:layout_below="@id/textnameclasse"
+            style="@style/styletextviewlandscape"/>
+
+    <Button
+        android:id="@+id/buttonadddayclass"
+        style="@style/Buttons"
+        android:layout_below="@id/nameclass"
+        android:layout_marginTop="24dp"
+        android:text="Add Days"
+
+        />
+
+        <TextView
+            android:text="Hour Class"
+            android:layout_below="@id/textdayclass"
+            style="@style/styletextviewlandscape"/>
+
+        <Button
+            android:id="@+id/buttonaddhour1"
+            style="@style/Buttons"
+            android:layout_below="@id/buttonadddayclass"
+            android:text="Monday"
+            android:layout_marginTop="24dp"
+            />
+
+        <Button
+            android:id="@+id/buttonaddhour"
+            style="@style/Buttons"
+            android:layout_below="@id/buttonadddayclass"
+            android:text="Saturday"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="390dp"
+            />
+
+
+    <Button
+        android:id="@+id/buttonaddclass"
+        style="@style/Buttons"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="198dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/buttonaddhour"
+        android:text="Add"
+        />
+
+</RelativeLayout>

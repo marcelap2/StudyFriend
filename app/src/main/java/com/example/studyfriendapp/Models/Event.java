@@ -1,4 +1,4 @@
-package com.example.studyfriendapp;
+package com.example.studyfriendapp.Models;
 
 public class Event {
 

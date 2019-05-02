@@ -10,7 +10,7 @@
         android:id="@+id/textViewnombreEvento"
         android:layout_below="@id/toolbar"
         android:text="Name Class"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
       />
 
     <EditText
@@ -18,27 +18,27 @@
         android:layout_below="@id/toolbar"
         android:inputType="text"
         android:text="Name Class"
-        style="@style/styleedittext"/>
+        style="@style/styleedittextlandscape"/>
 
 
     <TextView
         android:id="@+id/textViewntEventorecordatory"
         android:layout_below="@id/textViewnombreEvento"
         android:text="Event"
-        style="@style/styletextview" />
+        style="@style/styletextviewlandscape" />
 
     <EditText
         android:id="@+id/eventrecordatory"
         android:layout_below="@id/editnombrerecordatory"
         android:inputType="text"
         android:text="Event"
-        style="@style/styleedittext"/>
+        style="@style/styleedittextlandscape"/>
 
     <TextView
         android:id="@+id/textViewcolorevent"
         android:layout_below="@id/textViewntEventorecordatory"
         android:text="Date"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
       />
 
     <EditText
@@ -46,13 +46,13 @@
         android:layout_below="@id/eventrecordatory"
         android:ems="6"
         android:inputType="date"
-        style="@style/styleedittext"/>
+        style="@style/styleedittextlandscape"/>
 
     <TextView
         android:id="@+id/textViewhourrecordatory"
         android:layout_below="@id/textViewcolorevent"
         android:text="Hour"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
     />
 
     <EditText
@@ -60,7 +60,7 @@
         android:layout_below="@id/editTextdate"
         android:ems="6"
         android:inputType="time"
-        style="@style/styleedittext"/>
+        style="@style/styleedittextlandscape"/>
 
     <Button
         android:id="@+id/buttonaddevent"

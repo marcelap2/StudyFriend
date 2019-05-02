@@ -10,38 +10,38 @@
         android:id="@+id/textViewclassgroup"
         android:layout_below="@id/toolbar"
         android:text="Name Class"
-        style="@style/styletextview" />
+        style="@style/styletextviewlandscape" />
 
     <EditText
         android:id="@+id/editnameclassgroup"
         android:text="Name Class"
         android:layout_below="@id/toolbar"
-        style="@style/styleedittext"/>
+        style="@style/styleedittextlandscape"/>
 
     <TextView
         android:id="@+id/textViewcolorevent"
         android:layout_below="@id/textViewclassgroup"
         android:text="ID Group"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
        />
 
     <EditText
         android:id="@+id/IDgroup"
         android:layout_below="@id/editnameclassgroup"
         android:text="ID Group"
-        style="@style/styleedittext"/>
+        style="@style/styleedittextlandscape"/>
 
     <TextView
         android:id="@+id/textViewnonegroup"
         android:layout_below="@id/textViewcolorevent"
         android:text="None Goup"
-        style="@style/styletextview"/>
+        style="@style/styletextviewlandscape"/>
 
     <EditText
         android:id="@+id/nonegroup"
         android:layout_below="@id/IDgroup"
         android:text="None Group"
-        style="@style/styleedittext"/>
+        style="@style/styleedittextlandscape"/>
 
     <Button
         android:id="@+id/buttonaddgroupclass"

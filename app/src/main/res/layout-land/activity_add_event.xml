@@ -14,13 +14,13 @@
         android:id="@+id/textViewFechaEvento"
         android:layout_below="@id/toolbar"
         android:text="Fecha"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
       />
 
     <EditText
         android:id="@+id/editfecha"
         android:layout_below="@id/toolbar"
-       style="@style/styleedittext"
+       style="@style/styleedittextlandscape"
         android:inputType="date"
         tools:text="@tools:sample/date/ddmmyy" />
 
@@ -28,7 +28,7 @@
         android:id="@+id/textViewnombreEvento"
         android:layout_below="@id/textViewFechaEvento"
         android:text="Name Event"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
       />
 
     <EditText
@@ -36,7 +36,7 @@
         android:layout_below="@id/editfecha"
         android:inputType="text"
         android:text="Name event"
-        style="@style/styleedittext"
+        style="@style/styleedittextlandscape"
         />
 
 
@@ -44,40 +44,38 @@
         android:id="@+id/textViewntEvento"
         android:layout_below="@id/textViewnombreEvento"
         android:text="Notifie Event"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
         />
 
     <ToggleButton
         android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
+        android:layout_width="117dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/editnameevent"
-        android:text="ToggleButton"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="150dp"/>
+        android:layout_below="@+id/editnameevent"
+        android:layout_marginLeft="290dp"
+        android:layout_marginTop="35dp"
+        android:text="ToggleButton" />
 
     <TextView
         android:id="@+id/textViewringtone"
         android:layout_below="@id/textViewntEvento"
         android:text="Ringtone"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
         />
 
     <Button
         android:id="@+id/buttonringtonevent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/Buttons"
         android:layout_below="@id/toggleButton"
-        android:textColor="@color/colorAccent"
         android:text="buscar"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="150dp"/>
+      />
 
     <TextView
         android:id="@+id/textViewcolorevent"
         android:layout_below="@id/textViewringtone"
         android:text="Color"
-        style="@style/styletextview"
+        style="@style/styletextviewlandscape"
        />
 
     <RadioGroup
@@ -88,9 +86,7 @@
 
     <Button
         android:id="@+id/buttonaddevent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorAccent"
+        style="@style/Buttons"
         android:text="Add Recordatory"
         android:layout_marginTop="900px"
         android:layout_centerHorizontal="true"/>

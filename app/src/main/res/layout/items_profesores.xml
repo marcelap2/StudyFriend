@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/card_viewprofesor"
+        android:elevation="3dp"
+        app:cardCornerRadius="0dp"
+        android:layout_margin="5dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            >
+
+            <ImageView
+                android:id="@+id/image_profesor"
+                android:layout_width="64dp"
+                android:layout_height="57dp"
+                android:clickable="true"
+                android:scaleType="fitXY" />
+
+
+            <TextView
+                android:id="@+id/name_profesor"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/image_profesor"
+                android:paddingRight="16dp"
+
+                android:text="Pepito" />
+
+            <TextView
+                android:id="@+id/text_profesor"
+                android:layout_width="248dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_profesor"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/image_profesor"
+                android:text="Quimica" />
+
+            <TextView
+                android:id="@+id/telefono_profesor"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_profesor"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@id/image_profesor"
+                android:text="11111111" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
