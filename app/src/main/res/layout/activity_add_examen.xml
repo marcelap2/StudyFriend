@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/textViewclassgroup"
+        style="@style/styletextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:text="Hora"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editnameclassgroup"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editnameclassgroup"
+        style="@style/styleedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="datetime"
+        android:text="10:00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toEndOf="@+id/textViewclassgroup"
+        app:layout_constraintTop_toBottomOf="@+id/IDgroup" />
+
+    <TextView
+        android:id="@+id/textViewcolorevent"
+        style="@style/styletextview"
+        android:layout_width="67dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:text="Clase"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nonegroup"
+        app:layout_constraintEnd_toStartOf="@+id/nonegroup"
+        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/IDgroup"
+        style="@style/styleedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:inputType="date"
+        android:text="01/02/2009"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintStart_toEndOf="@+id/textViewnonegroup"
+        app:layout_constraintTop_toBottomOf="@+id/nonegroup" />
+
+    <TextView
+        android:id="@+id/textViewnonegroup"
+        style="@style/styletextview"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="72dp"
+        android:text="Dia"
+        app:layout_constraintBaseline_toBaselineOf="@+id/IDgroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewcolorevent" />
+
+    <EditText
+        android:id="@+id/nonegroup"
+        style="@style/styleedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="76dp"
+        android:text="None Group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/buttonaddgroupclass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="144dp"
+        android:text="Add Exam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/barrier3"
+        app:layout_constraintTop_toBottomOf="@+id/editnameclassgroup"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="textViewclassgroup,textViewnonegroup,textViewcolorevent"
+        tools:layout_editor_absoluteX="360dp" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="editnameclassgroup,IDgroup,nonegroup"
+        tools:layout_editor_absoluteX="360dp" />
+
+</android.support.constraint.ConstraintLayout>

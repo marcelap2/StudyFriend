@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/textViewnombreEvento"
+        style="@style/styletextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="37dp"
+        android:text="Name Class"
+        app:layout_constraintEnd_toStartOf="@+id/editnombrerecordatory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/editnombrerecordatory"
+        style="@style/styleedittext"
+        android:layout_width="174dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="40dp"
+        android:inputType="text"
+        android:text="Name Class"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+    <TextView
+        android:id="@+id/textViewntEventorecordatory"
+        style="@style/styletextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="8dp"
+        android:text="Event"
+        app:layout_constraintEnd_toStartOf="@+id/eventrecordatory"
+        app:layout_constraintHorizontal_bias="0.425"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewnombreEvento" />
+
+    <EditText
+        android:id="@+id/eventrecordatory"
+        style="@style/styleedittext"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="48dp"
+        android:inputType="text"
+        android:text="Event"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editnombrerecordatory" />
+
+    <TextView
+        android:id="@+id/textViewcolorevent"
+        style="@style/styletextview"
+        android:layout_width="35dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="57dp"
+        android:text="Date"
+        app:layout_constraintEnd_toStartOf="@+id/editTextdate"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewntEventorecordatory" />
+
+    <EditText
+        android:id="@+id/editTextdate"
+        style="@style/styleedittext"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:ems="6"
+        android:inputType="date"
+        android:text="01/01/2019"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eventrecordatory" />
+
+    <TextView
+        android:id="@+id/textViewhourrecordatory"
+        style="@style/styletextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:text="Hour"
+        app:layout_constraintEnd_toStartOf="@+id/editTexthour"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewcolorevent" />
+
+    <EditText
+        android:id="@+id/editTexthour"
+        style="@style/styleedittext"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="40dp"
+        android:ems="6"
+        android:inputType="time"
+        android:text="12:00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextdate" />
+
+    <Button
+        android:id="@+id/buttonaddevent"
+        android:layout_width="784dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="116dp"
+        android:text="Add Event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTexthour"
+        app:layout_constraintVertical_bias="0.195" />
+</android.support.constraint.ConstraintLayout>

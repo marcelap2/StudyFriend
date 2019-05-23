@@ -1,80 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_chains"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-    
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <include android:id="@+id/toolbar"
-            layout="@layout/toolbar"/>
+    app:layout_editor_absoluteX="0dp"
+    app:layout_editor_absoluteY="80dp"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="80dp">
 
 
-        <TextView
-            android:id="@+id/textnameclasse"
-            android:text="name class"
-            android:layout_below="@id/toolbar"
-            style="@style/styletextview"
-            />
-
-        <EditText
-            android:id="@+id/nameclass"
-            android:text="name class"
-            android:layout_below="@id/toolbar"
-            style="@style/styleedittext"
-            />
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
-        <TextView
-            android:id="@+id/textdayclass"
-            android:text="Days class"
-            android:layout_below="@id/textnameclasse"
-            style="@style/styletextview"/>
+    <TextView
+        android:id="@+id/textnameclasse"
+        style="@style/styletextview"
+        android:layout_width="92dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@+id/nameclass"
+        android:text="@string/name_class"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameclass"
+        app:layout_constraintEnd_toStartOf="@+id/nameclass"
+        app:layout_constraintStart_toEndOf="@+id/barrier2" />
 
-        <Button
-            android:id="@+id/buttonadddayclass"
-            style="@style/Buttons"
-            android:layout_below="@id/nameclass"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="24dp"
-            android:text="Add Days"
-
-            />
-
-        <TextView
-            android:text="Hour Class"
-            android:layout_below="@id/textdayclass"
-            style="@style/styletextview"/>
-
-        <Button
-            android:id="@+id/buttonaddhour1"
-            style="@style/Buttons"
-            android:layout_below="@id/buttonadddayclass"
-            android:text="Monday"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="150dp"
-            />
-
-        <Button
-            android:id="@+id/buttonaddhour"
-            style="@style/Buttons"
-            android:layout_below="@id/buttonadddayclass"
-            android:text="Saturday"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="250dp"
-            />
+    <EditText
+        android:id="@+id/nameclass"
+        style="@style/styleedittext"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="19dp"
+        android:text="name class"
+        app:layout_constraintBottom_toTopOf="@+id/editTextHourClass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textnameclasse"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
-        <Button
-            android:id="@+id/buttonaddclass"
-            style="@style/Buttons"
-            android:text="Add"
-            android:layout_centerHorizontal="true"
-            android:layout_below="@id/buttonaddhour"
-            android:layout_marginTop="50dp"
-            />
-    </RelativeLayout>
+    <TextView
+        android:id="@+id/textdayclass"
+        style="@style/styletextview"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_below="@id/textnameclasse"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="35dp"
+        android:layout_toStartOf="@+id/buttonadddayclass"
+        android:text="Days class"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddclass"
+        app:layout_constraintEnd_toStartOf="@+id/buttonadddayclass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:text="Days class" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/buttonadddayclass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameclass"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="18dp"
+        android:text="Add Days"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddclass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textdayclass"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHourClass" />
+
+    <TextView
+        android:id="@+id/textView4"
+        style="@style/styletextview"
+        android:layout_width="92dp"
+        android:layout_height="23dp"
+        android:layout_below="@+id/textdayclass"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="29dp"
+        android:layout_toStartOf="@+id/editTextHourClass"
+        android:text="Hour Class"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextHourClass"
+        app:layout_constraintEnd_toStartOf="@+id/editTextHourClass"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editTextHourClass"
+        android:layout_width="152dp"
+        android:layout_height="47dp"
+        android:layout_above="@+id/buttonaddclass"
+        android:layout_below="@+id/buttonadddayclass"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="25dp"
+        android:ems="10"
+        android:inputType="time"
+        android:text="10:50"
+        app:layout_constraintBottom_toTopOf="@+id/buttonadddayclass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/nameclass" />
+
+    <Button
+        android:id="@+id/buttonaddclass"
+        android:layout_width="783dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="25dp"
+        android:text="Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonadddayclass" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="editTextHourClass,nameclass" />
+
+
+</android.support.constraint.ConstraintLayout>

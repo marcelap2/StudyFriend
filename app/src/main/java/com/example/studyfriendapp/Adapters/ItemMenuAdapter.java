@@ -1,5 +1,6 @@
 package com.example.studyfriendapp.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -83,6 +84,8 @@ public class ItemMenuAdapter extends RecyclerView.Adapter<ItemMenuAdapter.MyView
                 }else if (item.getName().equalsIgnoreCase(("Fallas"))){
 
                 }
+
+                ((Activity)  mContext).overridePendingTransition(R.transition.left_in,R.transition.left_out);
 
 
             }

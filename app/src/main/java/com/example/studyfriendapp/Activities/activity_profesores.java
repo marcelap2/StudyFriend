@@ -1,6 +1,8 @@
 package com.example.studyfriendapp.Activities;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
@@ -31,6 +33,7 @@ public class activity_profesores extends AppCompatActivity {
     private RecyclerView recycler;
     private ProfesorAdapter adapter;
     private FloatingActionButton floatingActionButton;
+    private  int spanCount = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,12 @@ public class activity_profesores extends AppCompatActivity {
         adapter = new ProfesorAdapter(this, lista);
         adapter.notifyDataSetChanged();
 
+        if (esLandscape(this) && esTablet(this)==false){
+            spanCount = 3;
+        } else if (esTablet(this) && esLandscape(this)==false){
+            spanCount = 3;
+        }
+
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 1);
         recycler.setLayoutManager(mLayoutManager);
         recycler.addItemDecoration(new activity_profesores.GridSpacingItemDecoration(1, dpToPx(0), true));
@@ -56,48 +65,11 @@ public class activity_profesores extends AppCompatActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  Snackbar.make(view, "Tocaste el FAB", Snackbar.LENGTH_LONG).show();
                 Intent i = new Intent(activity_profesores.this, add_Profesor.class);
                 view.getContext().startActivity(i);
             }
         });
 
-        navegationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-
-                boolean actitransaction = false;
-                Intent intent = null;
-
-                switch (menuItem.getItemId()){
-                    case R.id.addClass:
-                        actitransaction = true;
-                        intent = new Intent(activity_profesores.this, activity_add_class.class);
-                        break;
-                    case R.id.addEvent:
-                        actitransaction = true;
-                        intent = new Intent(activity_profesores.this, activity_add_event.class);
-                        break;
-                    case R.id.addGroup:
-                        actitransaction = true;
-                        intent = new Intent(activity_profesores.this, activity_add_groupclass.class);
-                        break;
-                    case R.id.addRecordatory:
-                        actitransaction = true;
-                        intent = new Intent(activity_profesores.this, activity_add_recordatory.class);
-                        break;
-                }
-
-                if (actitransaction){
-                    startActivity(intent);
-                    menuItem.setChecked(true);
-                    getSupportActionBar().setTitle(menuItem.getTitle());
-                    drawerLayout.closeDrawers();
-                }
-
-                return true;
-            }
-        });
 
         fillEvent();
     }
@@ -110,9 +82,14 @@ public class activity_profesores extends AppCompatActivity {
                 R.drawable.perrfil_1
         };
 
-        lista.add(new Profesor ("Pepitos", "Quimica", "3112222222", covers[0]));
+        lista.add(new Profesor ("Pepito", "Quimica", "3112222222", covers[0]));
 
 
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.transition.left_in,R.transition.left_out);
     }
 
 
@@ -166,6 +143,18 @@ public class activity_profesores extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+
+    public static boolean esTablet (Context context) {
+        return (context.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK)
+                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+    }
+
+    public  static boolean esLandscape (Context contex){
+        return contex.getResources().getConfiguration().orientation ==
+                contex.getResources().getConfiguration()
+                        .ORIENTATION_LANDSCAPE;
     }
 
 }

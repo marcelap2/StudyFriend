@@ -1,23 +1,18 @@
 package com.example.studyfriendapp.Activities;
 
+import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
-
 import com.example.studyfriendapp.Adapters.ItemMenuAdapter;
 import com.example.studyfriendapp.Models.ItemMenu;
 import com.example.studyfriendapp.R;
@@ -26,9 +21,6 @@ import java.util.ArrayList;
 
 public class menu_items extends AppCompatActivity {
 
-
-    private DrawerLayout drawerLayout;
-    private NavigationView navegationView;
     private ArrayList<ItemMenu> lista = new ArrayList<ItemMenu>();
     private RecyclerView recycler;
     private ItemMenuAdapter adapter;
@@ -42,18 +34,18 @@ public class menu_items extends AppCompatActivity {
 
         setToolbar();
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        navegationView = (NavigationView) findViewById(R.id.naview);
         recycler = (RecyclerView) findViewById(R.id.reciclador);
 
         lista = new ArrayList<>();
         adapter = new ItemMenuAdapter(this, lista);
         adapter.notifyDataSetChanged();
 
-        if (this.getResources().getConfiguration().orientation ==
-                this.getResources().getConfiguration()
-                        .ORIENTATION_LANDSCAPE){
+        if (esLandscape(this) && esTablet(this)==false){
             spanCount = 3;
+        } else if (esTablet(this) && esLandscape(this)==false){
+            spanCount = 3;
+        }else if (esTablet(this ) && esLandscape(this)){
+            spanCount = 5;
         }
 
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, spanCount);
@@ -62,42 +54,7 @@ public class menu_items extends AppCompatActivity {
         recycler.setItemAnimator(new DefaultItemAnimator());
         recycler.setAdapter(adapter);
 
-        navegationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
-                boolean actitransaction = false;
-                Intent intent = null;
-
-                switch (menuItem.getItemId()){
-                    case R.id.addClass:
-                        actitransaction = true;
-                        intent = new Intent(menu_items.this, activity_add_class.class);
-                        break;
-                    case R.id.addEvent:
-                        actitransaction = true;
-                        intent = new Intent(menu_items.this, activity_add_event.class);
-                        break;
-                    case R.id.addGroup:
-                        actitransaction = true;
-                        intent = new Intent(menu_items.this, activity_add_groupclass.class);
-                        break;
-                    case R.id.addRecordatory:
-                        actitransaction = true;
-                        intent = new Intent(menu_items.this, activity_add_recordatory.class);
-                        break;
-                }
-
-                if (actitransaction){
-                    startActivity(intent);
-                    menuItem.setChecked(true);
-                    getSupportActionBar().setTitle(menuItem.getTitle());
-                    drawerLayout.closeDrawers();
-                }
-
-                return true;
-            }
-        });
 
         //   lista.add(new Event ("Menu", "Mi Menu"));
 
@@ -108,17 +65,18 @@ public class menu_items extends AppCompatActivity {
     private void setToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_drawer);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     private void fillEvent (){
         int[] covers = new int[]{
-                R.drawable.icons8_menu,
-                R.drawable.icons8_libro_filled,
-                R.drawable.icons8_clase,
-                R.drawable.icons8_evento_aceptado,
-                R.drawable.icons8_tarea,
+                R.drawable.agenda,
+                R.drawable.profesor1,
+                R.drawable.horarios,
+                R.drawable.clases,
+                R.drawable.notas,
+                R.drawable.falla
+
         };
 
         lista.add(new ItemMenu ("Agenda", "Mi Menu", covers[0]));
@@ -126,21 +84,9 @@ public class menu_items extends AppCompatActivity {
         lista.add(new ItemMenu("Horarios", "No class Todat", covers[2]));
         lista.add(new ItemMenu("Clases", "No Event", covers[3]));
         lista.add(new ItemMenu("Mis notas", "No hay tareas", covers[4]));
-        lista.add(new ItemMenu("Fallas", "No hay tareas", covers[4]));
+        lista.add(new ItemMenu("Fallas", "No hay tareas", covers[5]));
     }
 
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()){
-            case android.R.id.home:
-                drawerLayout.openDrawer(GravityCompat.START);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
-
-    }
 
     public class GridSpacingItemDecoration extends RecyclerView.ItemDecoration {
 
@@ -180,5 +126,22 @@ public class menu_items extends AppCompatActivity {
     private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
+    }
+
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.transition.fade_in,R.transition.fade_out);
+    }
+
+    public static boolean esTablet (Context context) {
+        return (context.getResources().getConfiguration().screenLayout
+                & Configuration.SCREENLAYOUT_SIZE_MASK)
+                >= Configuration.SCREENLAYOUT_SIZE_LARGE;
+    }
+
+    public  static boolean esLandscape (Context contex){
+        return contex.getResources().getConfiguration().orientation ==
+                contex.getResources().getConfiguration()
+                        .ORIENTATION_LANDSCAPE;
     }
 }

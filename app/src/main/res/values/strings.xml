@@ -8,6 +8,11 @@
     <string name="item_2" size="15dp">Profesores</string>
     <string name="item_3" size="15dp">Clases</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name_class">name class</string>
+
+
 </resources>
 
 

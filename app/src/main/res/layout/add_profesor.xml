@@ -1,72 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include android:id="@+id/toolbar"
-        layout="@layout/toolbar"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
     <TextView
         android:id="@+id/text_nombre_profesor"
-        android:layout_below="@id/toolbar"
-        android:text="Name Profesor"
         style="@style/styletextview"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="Name Profesor"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_nombre_profesor"
+        app:layout_constraintEnd_toStartOf="@+id/edit_nombre_profesor"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edit_nombre_profesor"
-        android:layout_below="@id/toolbar"
+        style="@style/styleedittext"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="32dp"
         android:inputType="text"
         android:text="Name"
-        style="@style/styleedittext"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
 
     <TextView
         android:id="@+id/text_materia"
-        android:layout_below="@id/text_nombre_profesor"
+        style="@style/styletextview"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
         android:text="Materia"
-        style="@style/styletextview" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_materia"
+        app:layout_constraintEnd_toStartOf="@+id/edit_materia"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edit_materia"
-        android:layout_below="@id/edit_nombre_profesor"
+        style="@style/styleedittext"
+        android:layout_width="198dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="20dp"
         android:inputType="text"
         android:text="Materia"
-        style="@style/styleedittext"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_nombre_profesor" />
 
     <TextView
         android:id="@+id/text_telefono"
-        android:layout_below="@id/text_materia"
-        android:text="Telefono"
         style="@style/styletextview"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Telefono"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_telefono"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edit_telefono"
-        android:layout_below="@id/edit_materia"
+        style="@style/styleedittext"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:ems="6"
-        style="@style/styleedittext"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/text_telefono"
+        app:layout_constraintTop_toBottomOf="@+id/edit_materia" />
 
     <TextView
         android:id="@+id/text_email"
-        android:layout_below="@id/text_telefono"
-        android:text="Email"
         style="@style/styletextview"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Email"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_email"
+        app:layout_constraintEnd_toStartOf="@+id/edit_email"
+        app:layout_constraintHorizontal_bias="0.354"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edit_email"
-        android:layout_below="@id/edit_telefono"
+        style="@style/styleedittext"
+        android:layout_width="171dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
         android:ems="6"
         android:inputType="time"
-        style="@style/styleedittext"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_telefono" />
 
     <Button
         android:id="@+id/buttonaddevent"
-        style="@style/Buttons"
-        android:layout_below="@id/edit_email"
+
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="104dp"
         android:text="Agregar"
-        android:layout_marginTop="70dp"
-        android:layout_centerHorizontal="true"/>
-</RelativeLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_email"
+        app:layout_constraintVertical_bias="0.829" />
+</android.support.constraint.ConstraintLayout>

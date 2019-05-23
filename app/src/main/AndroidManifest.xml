@@ -4,22 +4,22 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icono_agenda"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Activities.details_events"></activity>
-        <activity android:name=".Activities.activity_add_recordatory" />
-        <activity android:name=".Activities.activity_add_groupclass" />
+        android:theme="@style/Theme_3">
+
+        <activity android:name=".Activities.details_events" />
+        <activity android:name=".Activities.activity_add_tareas" />
+        <activity android:name=".Activities.activity_add_examen" />
         <activity android:name=".Activities.activity_add_class" />
         <activity android:name=".Activities.activity_add_event" />
         <activity android:name=".Activities.menu_items" />
-        <activity android:name=".Activities.Agenda"/>
-        <activity android:name=".Activities.activity_profesores"/>
-        <activity android:name=".Activities.add_Profesor"/>
+        <activity android:name=".Activities.Agenda" />
+        <activity android:name=".Activities.activity_profesores" />
+        <activity android:name=".Activities.add_Profesor" />
         <activity android:name=".MainActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

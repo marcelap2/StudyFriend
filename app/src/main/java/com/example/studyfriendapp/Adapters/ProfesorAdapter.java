@@ -1,5 +1,6 @@
 package com.example.studyfriendapp.Adapters;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
@@ -64,6 +65,7 @@ public class ProfesorAdapter  extends RecyclerView.Adapter<ProfesorAdapter.MyVie
             @Override
             public void onClick(View view) {
                 Toast.makeText(mContext,"Click seleccionando: "+ item.getName(),Toast.LENGTH_SHORT).show();
+                ((Activity)  mContext).overridePendingTransition(R.transition.zoom_back_in,R.transition.zoom_back_out);
             }
         });
 

@@ -1,74 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include android:id="@+id/toolbar"
-        layout="@layout/toolbar"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
 
-        <TextView
-            android:id="@+id/textnameclasse"
-            android:text="name class"
-            android:layout_below="@id/toolbar"
-            style="@style/styletextviewlandscape"
-            />
+    <TextView
+        android:id="@+id/textnameclasse"
+        style="@style/styletextviewlandscape"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="137dp"
+        android:text="name class"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nameclass"
+        app:layout_constraintEnd_toStartOf="@+id/nameclass"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/nameclass"
         style="@style/styleedittextlandscape"
         android:layout_below="@id/toolbar"
-        android:layout_marginTop="41dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="10dp"
         android:text="name class"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/buttonadddayclass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textnameclasse"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
-        <TextView
-            android:id="@+id/textdayclass"
-            android:text="Days class"
-            android:layout_below="@id/textnameclasse"
-            style="@style/styletextviewlandscape"/>
+    <TextView
+        android:id="@+id/textdayclass"
+        style="@style/styletextviewlandscape"
+        android:layout_below="@id/textnameclasse"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="38dp"
+        android:text="Days class"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/buttonadddayclass"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textnameclasse" />
 
     <Button
         android:id="@+id/buttonadddayclass"
-        style="@style/Buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/nameclass"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="71dp"
+
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="216dp"
+        android:layout_marginBottom="14dp"
         android:text="Add Days"
+        app:layout_constraintBottom_toTopOf="@+id/edithourclass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textdayclass"
+        app:layout_constraintTop_toBottomOf="@+id/nameclass" />
 
-        />
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/styletextviewlandscape"
+        android:layout_below="@id/textdayclass"
+        android:layout_marginStart="137dp"
+        android:layout_marginEnd="42dp"
+        android:text="Hour Class"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edithourclass"
+        app:layout_constraintEnd_toStartOf="@+id/edithourclass"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:text="Hour Class"
-            android:layout_below="@id/textdayclass"
-            style="@style/styletextviewlandscape"/>
 
-        <Button
-            android:id="@+id/buttonaddhour1"
-            style="@style/Buttons"
-            android:layout_below="@id/buttonadddayclass"
-            android:text="Monday"
-            android:layout_marginTop="24dp"
-            />
-
-        <Button
-            android:id="@+id/buttonaddhour"
-            style="@style/Buttons"
-            android:layout_below="@id/buttonadddayclass"
-            android:text="Saturday"
-            android:layout_marginTop="24dp"
-            android:layout_marginLeft="390dp"
-            />
-
+    <EditText
+        android:id="@+id/edithourclass"
+        style="@style/styleedittextlandscape"
+        android:layout_below="@+id/buttonadddayclass"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="153dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddclass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonadddayclass" />
 
     <Button
         android:id="@+id/buttonaddclass"
-        style="@style/Buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edithourclass"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="198dp"
-        android:layout_marginTop="40dp"
-        android:layout_below="@+id/buttonaddhour"
+        android:layout_marginBottom="16dp"
         android:text="Add"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>

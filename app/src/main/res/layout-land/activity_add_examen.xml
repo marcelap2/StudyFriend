@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <TextView
+                android:id="@+id/textViewclassgroup"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/toolbar"
+                android:text="Clase" />
+
+            <EditText
+                android:id="@+id/editnameclassgroup"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/toolbar"
+                android:layout_marginTop="21dp"
+                android:text="Name Class" />
+
+            <TextView
+                android:id="@+id/textViewcolorevent"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/textViewclassgroup"
+                android:text="Dia" />
+
+            <EditText
+                android:id="@+id/IDgroup"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/editnameclassgroup"
+                android:layout_marginTop="30dp"
+                android:inputType="date"
+                android:text="01/02/2009" />
+
+            <TextView
+                android:id="@+id/textViewnonegroup"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/textViewcolorevent"
+                android:text="Hora" />
+
+            <EditText
+                android:id="@+id/nonegroup"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/IDgroup"
+                android:inputType="datetime"
+                android:text="10:00" />
+
+            <Button
+                android:id="@+id/buttonaddgroupclass"
+               android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/nonegroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Add Exam" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

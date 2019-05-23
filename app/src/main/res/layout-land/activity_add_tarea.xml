@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.activity_add_event">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/textViewFechaEvento"
+        style="@style/styletextview"
+        android:layout_width="53dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="21dp"
+        android:text="Clase"
+        app:layout_constraintBottom_toTopOf="@+id/textViewnombreEvento"
+        app:layout_constraintEnd_toStartOf="@+id/editfecha"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <EditText
+        android:id="@+id/editfecha"
+        style="@style/styleedittext"
+        android:layout_width="208dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="9dp"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editnameevent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewFechaEvento"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:text="texto" />
+
+    <TextView
+        android:id="@+id/textViewnombreEvento"
+        style="@style/styletextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="32dp"
+        android:text="Titulo"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/editnameevent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFechaEvento" />
+
+    <EditText
+        android:id="@+id/editnameevent"
+        style="@style/styleedittext"
+        android:layout_width="207dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="text"
+        android:text="Titulo"
+        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewnombreEvento"
+        app:layout_constraintTop_toBottomOf="@+id/editfecha" />
+
+
+    <TextView
+        android:id="@+id/textViewntEvento"
+        style="@style/styletextview"
+        android:layout_width="91dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="109dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="32dp"
+        android:text="Recordar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddevent"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButton"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="261dp"
+        android:layout_marginBottom="13dp"
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/buttonaddevent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewntEvento"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="183dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/buttonaddevent"
+        android:layout_width="623dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="24dp"
+        android:text="Add Tarea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/toggleButton" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="359dp"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="textViewFechaEvento,textViewntEvento,textViewnombreEvento"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="35dp"
+        android:text="Descripcion"
+        app:layout_constraintBottom_toTopOf="@+id/textViewntEvento"
+        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toBottomOf="@+id/textViewnombreEvento" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="199dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="descripcion"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/editnameevent" />
+
+
+</android.support.constraint.ConstraintLayout>

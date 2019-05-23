@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+
+            <TextView
+                android:id="@+id/textViewnombreEvento"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/toolbar"
+                android:text="Name Class" />
+
+            <EditText
+                android:id="@+id/editnombrerecordatory"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/toolbar"
+                android:inputType="text"
+                android:text="Name Class" />
+
+
+            <TextView
+                android:id="@+id/textViewntEventorecordatory"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/textViewnombreEvento"
+                android:text="Event" />
+
+            <EditText
+                android:id="@+id/eventrecordatory"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/editnombrerecordatory"
+                android:inputType="text"
+                android:text="Event" />
+
+            <TextView
+                android:id="@+id/textViewcolorevent"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/textViewntEventorecordatory"
+                android:text="Date" />
+
+            <EditText
+                android:id="@+id/editTextdate"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/eventrecordatory"
+                android:ems="6"
+                android:inputType="date" />
+
+            <TextView
+                android:id="@+id/textViewhourrecordatory"
+                style="@style/styletextviewlandscape"
+                android:layout_below="@id/textViewcolorevent"
+                android:text="Hour" />
+
+            <EditText
+                android:id="@+id/editTexthour"
+                style="@style/styleedittextlandscape"
+                android:layout_below="@id/editTextdate"
+                android:ems="6"
+                android:inputType="time" />
+
+            <Button
+                android:id="@+id/buttonaddevent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/editTexthour"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"
+                android:layout_marginTop="70dp"
+                android:text="Add Event" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+  </RelativeLayout>
